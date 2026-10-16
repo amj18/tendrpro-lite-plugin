@@ -1,0 +1,8 @@
+{
+  "name": "tendrpro-lite-marketplace",
+  "owner": { "name": "amj18" },
+  "description": "TendrPro Lite skills pack — buyer supplier evaluation and seller RFP response workflows; free to use, not for resale.",
+  "plugins": [
+    { "name": "tendrpro-lite", "source": "./" }
+  ]
+}
