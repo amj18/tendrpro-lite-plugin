@@ -1,8 +1,23 @@
 {
   "name": "tendrpro-lite",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Buyer supplier-evaluation and seller RFP-response skills: decompose RFPs, RAG-match evidence against a knowledge base, score suppliers, generate proposal documents, and self-correct from operator feedback.",
-  "author": { "name": "amj18" },
+  "author": {
+    "name": "amj18"
+  },
   "license": "SEE LICENSE IN LICENSE",
-  "keywords": ["rfp", "procurement", "supplier-evaluation", "proposal", "tender", "rfq"]
+  "keywords": [
+    "rfp",
+    "procurement",
+    "supplier-evaluation",
+    "proposal",
+    "tender",
+    "rfq"
+  ],
+  "homepage": "https://github.com/amj18/tendrpro-lite-plugin",
+  "repository": "https://github.com/amj18/tendrpro-lite-plugin",
+  "documentationUrl": "https://github.com/amj18/tendrpro-lite-plugin#readme",
+  "supportUrl": "https://github.com/amj18/tendrpro-lite-plugin/issues",
+  "privacyPolicyUrl": "https://github.com/amj18/tendrpro-lite-plugin/blob/main/PRIVACY.md",
+  "termsOfServiceUrl": "https://github.com/amj18/tendrpro-lite-plugin/blob/main/LICENSE"
 }
