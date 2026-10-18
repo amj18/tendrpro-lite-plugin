@@ -45,6 +45,8 @@ Users do not need to remember workflow names or commands. Describe the procureme
 
 Most procurement users can skip this section. It is for the person who manages the workspace and adds the pack once for everyone who will use it.
 
+If TendrPro Lite is not listed in the Anthropic or OpenAI plugin store, download this repository as a ZIP file and upload it directly to your Claude or ChatGPT workspace. Once it is added, describe the procurement task you want to complete and start using it.
+
 ### Claude Code
 
 ```bash
