@@ -29,17 +29,19 @@ TendrPro Lite works inside the AI workspace and uses its built-in document tools
 
 ## Seven guided workflows
 
-The pack includes seven focused workflows:
+Each workflow has an exact skill name. You can describe the procurement task in plain language or name the skill directly.
 
-- Prepare reference documents for use as evidence
-- Evaluate suppliers against an RFP or ITT
-- Draft a structured RFP response
-- Prepare an email to accompany an output
-- Check that evidence is being used accurately
-- Apply relevant feedback from earlier work
-- Capture corrections and revise the current output
+| Skill name | Use it for |
+|------------|------------|
+| `tp-kb-index` | Prepare reference documents so they can be used as evidence |
+| `tp-evaluate-suppliers` | Evaluate suppliers against an RFP or ITT |
+| `tp-generate-rfp-response` | Draft a structured RFP response |
+| `tp-email-draft` | Prepare an email to accompany an output |
+| `tp-regression-gate` | Check that the reference documents return the right evidence |
+| `tp-feedback-review` | Capture a correction and revise the current output |
+| `tp-brain-recall` | Apply relevant lessons and corrections from earlier work |
 
-Users do not need to remember workflow names or commands. Describe the procurement task and TendrPro Lite will follow the relevant process.
+If you do not know which skill to choose, describe the outcome you need and TendrPro Lite will follow the relevant process.
 
 ## Add TendrPro Lite to a workspace
 
