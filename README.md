@@ -1,74 +1,75 @@
-# TendrPro Lite — Skills Pack
+# TendrPro Lite Skills Pack
 
 ![TendrPro Lite logo](assets/logo.png)
 
-A pack of 7 self-contained skills for buyer supplier-evaluation and
-seller RFP-response workflows. Skills guide the LLM through
-decomposing RFPs into atomic requirements, matching evidence from
-supplier proposals and knowledge bases, scoring with weighted mandatory
-gates, generating structured proposal documents, composing email
-drafts, validating knowledge base quality, reviewing prior work, and
-self-correcting from operator feedback. No external engine or scripts
-required — the LLM executes every step inline using its native tools.
+TendrPro Lite helps procurement and contract professionals evaluate suppliers and prepare tender responses using the documents they already work with. It turns common sourcing tasks into guided AI workflows, with no coding required for day-to-day use.
 
-## Skills
+Once the pack is available in your Claude or ChatGPT workspace, describe the outcome you need in plain language. You do not need to manage API keys, databases, scripts, or separate software.
 
-| Skill | Purpose |
-|-------|---------|
-| `tp-kb-index` | Prepare and index a knowledge base for retrieval |
-| `tp-evaluate-suppliers` | Buyer: decompose RFP, score suppliers, produce award docs |
-| `tp-generate-rfp-response` | Seller: draft a structured proposal from KB evidence |
-| `tp-email-draft` | Compose a professional email to accompany outputs |
-| `tp-regression-gate` | Validate knowledge base retrieval quality |
-| `tp-brain-recall` | Review prior work and apply corrections before a new run |
-| `tp-feedback-review` | Capture operator feedback, revise outputs, record corrections |
+## What you can do
 
-## Install
+| Task | What TendrPro Lite produces |
+|------|-----------------------------|
+| Evaluate suppliers | A requirement-by-requirement assessment, evidence-backed scoring, a ranked shortlist, an award recommendation, and draft supplier letters |
+| Prepare a tender response | A structured proposal, compliance matrix, commercial content, formatted PDF, and editable Word document |
+| Use reference documents | Evidence drawn from your capability statements, case studies, policies, rate cards, and other approved material |
+| Prepare email drafts | Suggested subject lines and copy-ready emails to accompany proposals, evaluations, or supplier letters |
+| Check output quality | A review of missing requirements, unsupported conclusions, evidence gaps, and scoring inconsistencies |
+| Correct an output | A revised result that records your correction for similar work in future |
+| Reuse prior feedback | Relevant corrections from earlier work are applied before a similar task begins |
 
-### Claude Code (own marketplace)
+## Getting started
+
+1. Provide the RFP, ITT, supplier proposals, or reference documents needed for the task.
+2. Ask for the outcome in plain language. For example: "Evaluate these supplier proposals against this RFP and explain the evidence behind each score."
+3. Review the compliance decisions, evidence, scores, assumptions, and any information marked as missing.
+4. If something is wrong, explain the correction so TendrPro Lite can apply it to similar work.
+
+TendrPro Lite works inside the AI workspace and uses its built-in document tools. It does not require an external processing engine or standalone scripts.
+
+## Seven guided workflows
+
+The pack includes seven focused workflows:
+
+- Prepare reference documents for use as evidence
+- Evaluate suppliers against an RFP or ITT
+- Draft a structured RFP response
+- Prepare an email to accompany an output
+- Check that evidence is being used accurately
+- Apply relevant feedback from earlier work
+- Capture corrections and revise the current output
+
+Users do not need to remember workflow names or commands. Describe the procurement task and TendrPro Lite will follow the relevant process.
+
+## Add TendrPro Lite to a workspace
+
+Most procurement users can skip this section. It is for the person who manages the workspace and adds the pack once for everyone who will use it.
+
+### Claude Code
 
 ```bash
 claude plugin marketplace add amj18/tendrpro-lite-plugin
 claude plugin install tendrpro-lite@tendrpro-lite-marketplace
 ```
 
-Or submit to the Anthropic directory from
-https://claude.ai/directory/manage (requires a paid Claude plan and a
-public GitHub repo).
+Workspace owners can also submit the pack to the [Anthropic directory](https://claude.ai/directory/manage). This requires a paid Claude plan and a public GitHub repository.
 
-### ChatGPT / Codex
+### ChatGPT and Codex
 
-Zip the plugin folder and submit at the OpenAI plugin portal. See
-https://developers.openai.com/plugins/deploy/submission for the current
-submission flow.
+Workspace owners can zip the plugin folder and submit it through the [OpenAI plugin portal](https://developers.openai.com/plugins/deploy/submission).
 
-## How it works
+The skills work with Claude or ChatGPT installations that support the plugin format.
 
-Each skill is a markdown workflow guide. When the operator's request
-matches a skill's description, the LLM loads the skill and follows its
-steps inline — reading documents, decomposing requirements, matching
-evidence, computing scores, and writing outputs to disk. No Python
-scripts, no database, no external API calls. The skills work on any
-Claude or ChatGPT installation that supports the plugin format.
+## Your documents and data
 
-## What the plugin reads, writes and sends
+TendrPro Lite reads only the files and folders you choose, such as RFPs, supplier proposals, reference documents, and previous outputs.
 
-- **Reads** only the files and folders the operator points it at
-  (RFPs, supplier proposals, knowledge-base documents, prior outputs).
-- **Writes** output files to the directory the operator names, or next
-  to the inputs if none is given: evaluation reports, scoring tables,
-  supplier letters, proposal drafts, email drafts, a `kb_index/`
-  folder with `kb_index.md` and `kb_summaries/`, regression-gate
-  reports, and feedback/correction notes.
-- **Sends** nothing anywhere. There are no scripts, hooks, MCP servers,
-  network calls or telemetry. Emails are drafted as text only and are
-  never sent.
+It writes evaluation reports, scoring tables, supplier letters, proposal drafts, email drafts, reference-document indexes, quality reports, and correction notes. Files are saved to the location you choose, or beside the source documents if you do not specify one.
 
-Scoring follows the RFP's own evaluation rules when it states them.
-Missing evidence is marked Unknown and flagged for clarification; it
-never disqualifies a supplier by itself. Prior corrections are only
-re-applied when the requirement and evidence are unchanged.
+TendrPro Lite sends nothing anywhere. It has no scripts, hooks, MCP servers, network calls, or telemetry. Email content is drafted as text and is never sent automatically.
+
+Supplier scoring follows the evaluation rules stated in the RFP. Missing evidence is marked as Unknown and flagged for clarification; it does not disqualify a supplier by itself. Previous corrections are only applied again when the requirement and evidence have not changed.
 
 ## License
 
-Free to use, including at work and inside companies. You may not sell, resell or bundle the skills into a paid product or service. For commercial licensing, contact the owner. See `LICENSE`.
+Free to use, including at work and inside companies. You may not sell, resell, or bundle the skills into a paid product or service. For commercial licensing, contact the owner. See [`LICENSE`](LICENSE).
